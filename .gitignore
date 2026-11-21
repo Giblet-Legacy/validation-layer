@@ -1,0 +1,6 @@
+# .gitignore — the validation layer
+# James's profile (his rules, guard words, runs) is private: it lives in ~/.forge/validation/ and never here (R9).
+profile_v*.json
+__pycache__/
+*.pyc
+.pytest_cache/

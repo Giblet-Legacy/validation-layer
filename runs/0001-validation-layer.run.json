@@ -1,0 +1,222 @@
+{
+ "id": "validation-layer-0001",
+ "name": "validation layer (P19)",
+ "context": "personal",
+ "jm": "full",
+ "inv": "Governance",
+ "invWhy": "",
+ "home": false,
+ "screen": {
+  "R4": {
+   "r": "pass",
+   "why": "Own time, own kit, the stack's own governance."
+  },
+  "R9": {
+   "r": "pass",
+   "why": "Only the method is published; rules and runs stay private."
+  }
+ },
+ "screenGo": false,
+ "jyn": {
+  "J-PAID": "yes",
+  "J-FIT": "yes",
+  "F6": "yes",
+  "R9": "no",
+  "F7": "no",
+  "F8": "yes",
+  "J-CAPSULE": "no",
+  "F1": "no",
+  "F5": "yes",
+  "J-REPLACE": "no"
+ },
+ "sev": "annoying",
+ "verdict": {
+  "v": "",
+  "reason": "",
+  "at": "",
+  "slice": "",
+  "date": "",
+  "trigger": "",
+  "change": ""
+ },
+ "modes": {
+  "fun": false,
+  "eng": false,
+  "arch": true
+ },
+ "keys": [
+  "PURPOSE",
+  "PURPOSE — 5 WHYS",
+  "NON-GOALS",
+  "VALUE",
+  "SUCCESS",
+  "STAKEHOLDERS",
+  "OWNERSHIP",
+  "OPERATIONS",
+  "IMPACT",
+  "COST",
+  "BUSINESS CASE",
+  "COMPETITION",
+  "CONSTRAINTS",
+  "DATA & COMPLIANCE",
+  "DEPENDENCIES",
+  "SCALE",
+  "OPTIONS",
+  "TRADE-OFFS",
+  "DECISION",
+  "FIRST SLICE",
+  "ASSUMPTIONS",
+  "VERIFICATION",
+  "OBSERVABILITY",
+  "FAILURE",
+  "ROOT CAUSE — 5 WHYS",
+  "SECURITY & MISUSE",
+  "RECOVERY",
+  "GOVERNANCE",
+  "CONTINUITY",
+  "LEGACY",
+  "RETIREMENT",
+  "RED TEAM"
+ ],
+ "answers": [
+  "The stack keeps adding layers on a first answer. The validation layer asks the architect's questions before a new layer or major version is built, and records the answer with its spec.",
+  {
+   "start": "Ask the architect's questions before a new layer is built.",
+   "whys": [
+    "Because new layers and versions get added on a first answer: the Saboteur reached a six-layer chain before a consolidation.",
+    "Because nothing in the stack asks what a layer is worth, or what it replaces, before code is written.",
+    "Because those questions lived in a checklist page outside the stack, used by one person on demand.",
+    "Because the checklist was built for a job interview failure (approaching a role as an engineer, not an architect) and never connected to the stack's own governance.",
+    "Because the stack had no layer whose job is to judge proposals; HAL judges actions and the agents check files, not decisions."
+   ],
+   "branches": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ]
+  },
+  "No AI inside the engine.\nNo blocking gate in the first slice (advise first).\nNo private rules, guard words or past runs in the public repo.\nNo second copy of the method: the page's data block stays the one source.",
+  "James sees a score, the flags and the three biggest gains for each proposed layer before code exists, and the run is kept with the layer's spec for anyone who reads it later.",
+  "3 new layers or major versions each have a recorded run with a verdict before their code, by 2027-02-28; and at least 1 run changes or kills a decision.",
+  "James decides. The agents and the VPS check would read the runs later. Nobody outside James is waiting for it yet.",
+  "James owns it and signs off its freezes.",
+  "James runs it before a new layer; the engine runs offline in seconds. Nothing runs on a timer, so there is no 3am call.",
+  "If it is wrong, a weak layer gets a good score and is built anyway; the harm is wasted build time, not lost data.",
+  "James's time per run (about 30 minutes for a Full run). The engine and tests cost nothing to run: local Python and Node.",
+  "Saves the rework of layers that should not have been built; doing nothing costs another chain like the Saboteur's before its consolidation, and the 1.0.0 consolidation took most of a day.",
+  "An architecture decision record template, a design review by a person, an AI review, or doing nothing and relying on memory. Could reuse an open-source ADR template instead of the checklist.",
+  "Spare time only. The method must stay one source (the page). Nothing private in a public repo. The stack's rules: version, never overwrite, James signs.",
+  "Run files with answers about the stack's own designs. James's rules and past runs are personal and stay in his home folder.",
+  "Python for the engine; Node only for the parity tests; the page on James's laptop as the source of truth. All local and replaceable.",
+  "One run per new layer, a few a month. At 10x it is still files on disk; the Patterns view gets more useful, not slower.",
+  "1. Port the page's scoring to Python, the page staying the source\n2. Use an open-source ADR template and no scoring\n3. Call the page's own script under Node from the stack\n4. Don't build it, park it: keep the checklist outside the stack",
+  "The port means two implementations, kept in step by parity tests. The ADR template has no scoring or flags. Node at run time would make Node a dependency of every layer that asks. Parking keeps the stack without a judge of proposals.",
+  {
+   "chosen": "Port the page's scoring to Python, the page staying the source",
+   "rejected": "ADR template; Node at run time; park it",
+   "reason": "Python is what every layer already runs; the parity tests keep the port honest against the page.",
+   "downside": "Two implementations of the scoring, and the parity tests only run where the private page is.",
+   "trigger": "If parity fails on more than 2 runs in a month, call the page under Node instead."
+  },
+  "The engine, the parity tests, and one run on the proposal itself, done by 2026-12-21.",
+  "The page's logic can be run outside a browser.\nThe Python engine gives the same scores as the page.\nThe method can be published without any work material.",
+  "Run the page's logic outside a browser under Node and compare scores with the Python engine on every synthetic run; a test refuses any published method that holds a guarded word or work material.",
+  "The parity test fails when the engine and the page disagree on a score; the privacy test fails when a published file holds work material.",
+  "The engine and the page disagree on a score, so a run is judged differently in the stack than on the page.",
+  {
+   "start": "The engine and the page disagree on a score.",
+   "whys": [
+    "Because a rule changed on the page and the Python port was not changed.",
+    "Because the parity tests only run where the private page is.",
+    "",
+    "",
+    ""
+   ],
+   "branches": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ]
+  },
+  "The worst misuse is publishing James's private rules or runs by accident; the extractor refuses a method with a guarded word, and the profile is git-ignored.",
+  "When the page changes a rule, run the extractor and the parity tests; fix the port until they pass, and record it as a new version.",
+  "James approves every freeze. The page's data block is the one source; the method file is generated from it; the CHANGELOG records each change.",
+  "The page, the method file and the spec let someone else run it. A handover capsule is not written yet.",
+  "The README shows one command that scores a run in seconds.",
+  {
+   "signal": "3 recorded runs by 2027-02-28 with no decision changed or killed by any of them",
+   "checkby": "2027-02-28",
+   "then": "James decides: keep it as advice, or retire it to the archive."
+  },
+  {
+   "reviewer": "",
+   "found": "",
+   "changing": "",
+   "rejected": ""
+  }
+ ],
+ "evidence": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   {
+    "fig": "Engine runs in under 1 second per run",
+    "status": "estimate",
+    "src": "",
+    "by": "self"
+   }
+  ],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   {
+    "fig": "13 of 13 parity tests pass",
+    "status": "verified",
+    "src": "tests/test_parity_v0_1.py, 2026-11-21",
+    "by": "self"
+   }
+  ],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+ ],
+ "retro": {
+  "result": "",
+  "happened": "",
+  "success": {},
+  "assumptions": {},
+  "kill": "",
+  "step": "",
+  "lesson": ""
+ },
+ "format": "james-checklist-run",
+ "version": "2.2.0",
+ "savedAt": "2026-11-21T00:00:00Z"
+}
