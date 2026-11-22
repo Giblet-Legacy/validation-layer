@@ -18,7 +18,7 @@ Functions in this file (pytest-collected):
 
 Tier:     P19 Validation, 0.1.0
 Spec:     SPEC.md 0.1.0
-Version:  0.1.0-dev
+Version:  0.1.0 (frozen 2026-11-22)
 Licence:  MSL-1.0
 Author:   James Gilbert (Giblets Forge)
 """

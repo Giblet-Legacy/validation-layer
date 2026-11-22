@@ -13,7 +13,7 @@ Function:
 Number:   P19
 Licence:  MSL-1.0
 Author:   James Gilbert (Giblets Forge)
-Status:   0.1.0-dev, carrying checklist 2.2.0
+Status:   0.1.0 (frozen 2026-11-22), carrying checklist 2.2.0. Next: 0.2.0 (PROPOSAL_V0_2.md)
 
 ## Score a run
 

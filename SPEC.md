@@ -14,7 +14,7 @@ Function:
     (§3).
 
 Number:    P19 (P1–P17 built; P18 Self proposed)
-Version:   SPEC 0.1.0-dev, carrying checklist 2.2.0
+Version:   SPEC 0.1.0, carrying checklist 2.2.0
 Depends:   Python 3 (engine); Node (parity tests and extraction only, on James's laptop)
 Licence:   MSL-1.0
 Author:    James Gilbert (Giblets Forge)
@@ -120,5 +120,7 @@ itself, which contain no private material.
 
 ## Document control
 
-- **SPEC 0.1.0-dev**: 2026-11-21, by the VS Code AI on James's "yes to
-  all 6".
+- **SPEC 0.1.0**: 2026-11-21, by the VS Code AI on James's "yes to all
+  6". Frozen 2026-11-22 (James: "yes to all and freeze commit and
+  push"). Next: 0.2.0, validation over a lifetime (PROPOSAL_V0_2.md,
+  agreed).

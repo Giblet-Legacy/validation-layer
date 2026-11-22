@@ -38,7 +38,7 @@ Public API:
 Tier:     P19 Validation, 0.1.0
 Depends:  method_v2_2.json; a profile (profile_neutral_v2_2.json, or James's)
 Spec:     SPEC.md 0.1.0
-Version:  0.1.0-dev
+Version:  0.1.0 (frozen 2026-11-22)
 Licence:  MSL-1.0
 Author:   James Gilbert (Giblets Forge)
 """

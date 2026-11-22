@@ -2,6 +2,34 @@
 
 CHANGELOG.md — build history for the validation layer, latest entry at top.
 
+## [v0.1.0] — 2026-11-22 — frozen; 0.2.0 agreed
+
+### Good
+- Frozen (James: "yes to all and freeze commit and push"). Headers say
+  `0.1.0 (frozen 2026-11-22)`; VERSION 0.1.0.
+- First push: `Giblet-Legacy/validation-layer` on GitHub.
+- **PROPOSAL_V0_2.md agreed:** validation over a lifetime.
+  - Each layer's, and each entity's, reasons become claims.
+  - The stack's own evidence keeps their λ current through Leighton V2,
+    with a decay per kind.
+  - A claim that goes unknown or doubted is asked about in the daily
+    report and the Field.
+  - James answers with a signed seal; nothing is removed automatically.
+  - It covers any entity James builds; runs on anything other than the
+    stack's layers stay private.
+- Run 0002, on that proposal, was redrafted for §9 (any entity): 65/100,
+  capped, flags F9 and J-CAPSULE.
+- Tests: 21/21 on the laptop.
+
+### Bad
+- Runs 0001 and 0002 were drafted by the AI and both are self-validated
+  (F9). Their outside checks, red teams and verdicts are James's.
+- 0.2.0 waits on James's choice of the 5 layers whose claims come first,
+  and on run 0002's verdict.
+
+### Ugly
+- No ugly items.
+
 ## [v0.1.0-dev] — 2026-11-21 — the checklist joins the stack
 
 ### Good
