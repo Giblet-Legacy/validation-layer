@@ -153,8 +153,8 @@
    "then": "James decides: keep, recalibrate, or retire 0.2.0 back to birth-only validation."
   },
   {
-   "reviewer": "",
-   "found": "",
+   "reviewer": "A fresh AI agent (Claude) that never saw the answers or how they were written; it checked claims against the stack's code, read-only, 2026-11-22. Its own facts are logged as claims and were re-checked against the code before use.",
+   "found": "1. CONSTRAINTS: 'Leighton V2 unchanged' pins the version whose unstated k/t units made 'forge trust' always return 1.00; V3 was frozen to fix it (leighton-engine-layer/SPEC_V3.md). Re-checked: true.\n2. ASSUMPTIONS / ROOT CAUSE: a static import graph misses how the stack is wired: 193 files use sys.path.insert, 12 use FORGE_LEGACY_ROOT, and the CLI, ai-gate and the Field load modules with importlib. Re-checked: true (the reviewer counted 22 for FORGE_LEGACY_ROOT; 12 outside the archives).\n3. SUCCESS / DECISION / FIRST SLICE: the first slice lands 2027-01-31 and the check is 2027-03-31 (about 60 days), but success and calibration both need 90 days. Re-checked: true.\nAlso: 'any entity' has no evidence source for things that aren't code; weights 'in one file' contradicts 'Leighton unchanged' (its registry is in memory); J-REPLACE 'yes' is wrong: it adds to birth-only validation, it replaces nothing running.",
    "changing": "",
    "rejected": ""
   }

@@ -1,0 +1,420 @@
+{
+ "generated": "Generated from james-checklist.html by tools/extract_v0_1.py; never edit by hand.",
+ "VERSION": "2.3.0",
+ "QS": [
+  {
+   "sec": "1. Why",
+   "k": "PURPOSE",
+   "q": "Why does this exist? What problem goes away?",
+   "m": "fea"
+  },
+  {
+   "sec": "1. Why",
+   "k": "PURPOSE — 5 WHYS",
+   "q": "Drill past the stated purpose to the real need.",
+   "type": "whys",
+   "seed": "PURPOSE",
+   "startLabel": "Stated purpose",
+   "rootLabel": "Real need",
+   "m": "ea"
+  },
+  {
+   "sec": "1. Why",
+   "k": "NON-GOALS",
+   "q": "What is this deliberately NOT doing?",
+   "m": "fea"
+  },
+  {
+   "sec": "1. Why",
+   "k": "VALUE",
+   "q": "Who benefits, and how would they notice?",
+   "m": "a"
+  },
+  {
+   "sec": "1. Why",
+   "k": "SUCCESS",
+   "q": "How do we know it worked? A measurable test, not a feeling.",
+   "m": "fea"
+  },
+  {
+   "sec": "2. Who",
+   "k": "STAKEHOLDERS",
+   "q": "Who has to agree to this — and who could block it?",
+   "m": "a"
+  },
+  {
+   "sec": "2. Who",
+   "k": "OWNERSHIP",
+   "q": "Who owns it? Who answers for it?",
+   "m": "a"
+  },
+  {
+   "sec": "2. Who",
+   "k": "OPERATIONS",
+   "q": "Who runs it day to day? Who gets the 3am call?",
+   "m": "a"
+  },
+  {
+   "sec": "2. Who",
+   "k": "IMPACT",
+   "q": "What happens to whom when it fails? Who gets hurt?",
+   "m": "a"
+  },
+  {
+   "sec": "2. Who",
+   "k": "COST",
+   "q": "Who pays to build it, run it, and maintain it?",
+   "m": "a"
+  },
+  {
+   "sec": "3. Business",
+   "k": "BUSINESS CASE",
+   "q": "How does this make money, save money, reduce risk, or create opportunity — and what does doing nothing cost?",
+   "hint": "Also: why would whoever pays keep paying? What happens if the problem is simply ignored? For a personal build, the currency is your time, reputation or opportunity — not just money.",
+   "m": "a"
+  },
+  {
+   "sec": "3. Business",
+   "k": "COMPETITION",
+   "q": "What else solves this today — rival products, existing tools, a manual workaround, or doing nothing? Why would anyone pick this instead?",
+   "hint": "Include buy vs build: could you buy, borrow or reuse something rather than build it? In a contest — a bid, a pitch, a hiring round — the competition is the other entries: what makes yours the one they pick?",
+   "m": "ea"
+  },
+  {
+   "sec": "4. How",
+   "k": "CONSTRAINTS",
+   "q": "What can't change? Budget, time, rules, hardware, skills.",
+   "m": "fea"
+  },
+  {
+   "sec": "4. How",
+   "k": "DATA & COMPLIANCE",
+   "q": "What data does it touch? Is any of it personal or regulated (GDPR, FCA, etc.)?",
+   "m": "ea"
+  },
+  {
+   "sec": "4. How",
+   "k": "DEPENDENCIES",
+   "q": "What do we rely on that we don't control? APIs, providers, libraries, people.",
+   "m": "ea"
+  },
+  {
+   "sec": "4. How",
+   "k": "SCALE",
+   "q": "How big does it get? What breaks at 10x?",
+   "m": "ea"
+  },
+  {
+   "sec": "4. How",
+   "k": "OPTIONS",
+   "q": "What are 2–3 ways to build it — or buy, borrow or reuse it instead?",
+   "m": "fea"
+  },
+  {
+   "sec": "4. How",
+   "k": "TRADE-OFFS",
+   "q": "Why this one over the others? What are we giving up?",
+   "m": "ea"
+  },
+  {
+   "sec": "5. Commit",
+   "k": "DECISION",
+   "q": "Commit. What did you choose, what did you reject, and what are you accepting?",
+   "type": "decision",
+   "m": "fea"
+  },
+  {
+   "sec": "5. Commit",
+   "k": "FIRST SLICE",
+   "q": "What's the smallest version worth shipping first? What comes after?",
+   "m": "fea"
+  },
+  {
+   "sec": "6. Prove it",
+   "k": "ASSUMPTIONS",
+   "q": "What must be true for this choice to hold?",
+   "m": "ea"
+  },
+  {
+   "sec": "6. Prove it",
+   "k": "VERIFICATION",
+   "q": "How do we know the assumptions hold?",
+   "m": "ea"
+  },
+  {
+   "sec": "6. Prove it",
+   "k": "OBSERVABILITY",
+   "q": "How do we see problems happening?",
+   "m": "ea"
+  },
+  {
+   "sec": "7. Survive failure",
+   "k": "FAILURE",
+   "q": "What breaks first — and what's the first failure that does real damage?",
+   "hint": "They aren't always the same. The first thing to break may be harmless; the first thing that costs money, customers, trust or the deal is the one to design for.",
+   "m": "fea"
+  },
+  {
+   "sec": "7. Survive failure",
+   "k": "ROOT CAUSE — 5 WHYS",
+   "q": "Drill from the failure to the thing that actually caused it.",
+   "type": "whys",
+   "seed": "FAILURE",
+   "startLabel": "Failure",
+   "rootLabel": "Root cause",
+   "m": "ea"
+  },
+  {
+   "sec": "7. Survive failure",
+   "k": "SECURITY & MISUSE",
+   "q": "Who could abuse this, and what's the worst they could do?",
+   "m": "ea"
+  },
+  {
+   "sec": "7. Survive failure",
+   "k": "RECOVERY",
+   "q": "How do we get back to working — and fix the root cause, not just the symptom?",
+   "m": "a"
+  },
+  {
+   "sec": "8. Survive success",
+   "k": "GOVERNANCE",
+   "q": "Once it's live, how do changes get proposed, approved, and recorded?",
+   "m": "a"
+  },
+  {
+   "sec": "8. Survive success",
+   "k": "CONTINUITY",
+   "q": "What happens if I disappear?",
+   "m": "a"
+  },
+  {
+   "sec": "8. Survive success",
+   "k": "LEGACY",
+   "q": "Can a stranger understand it and change it?",
+   "m": "ea"
+  },
+  {
+   "sec": "8. Survive success",
+   "k": "RETIREMENT",
+   "q": "What's the kill signal — the checkable condition that means stop — and what happens then?",
+   "type": "kill",
+   "hint": "Decide it now, while stopping is cheap. Once you've sunk time in, every signal looks like a reason to keep going.",
+   "m": "fa"
+  },
+  {
+   "sec": "9. Challenge",
+   "k": "RED TEAM",
+   "q": "Export this, hand it to someone else or a fresh AI, and ask them to attack it. What did they find, and what are you changing?",
+   "type": "redteam",
+   "m": "ea"
+  }
+ ],
+ "MODES": [
+  [
+   "fun",
+   "Fun idea",
+   "Curiosity, learning, a toy or a weekend build. Keep it light."
+  ],
+  [
+   "eng",
+   "Engineering concept",
+   "Proving a technique, library or approach actually works."
+  ],
+  [
+   "arch",
+   "Architectural reasoning",
+   "A real system someone will depend on, pay for or judge."
+  ]
+ ],
+ "MODE_TAGS": {
+  "PURPOSE": "fea",
+  "PURPOSE — 5 WHYS": "ea",
+  "NON-GOALS": "fea",
+  "VALUE": "a",
+  "SUCCESS": "fea",
+  "STAKEHOLDERS": "a",
+  "OWNERSHIP": "a",
+  "OPERATIONS": "a",
+  "IMPACT": "a",
+  "COST": "a",
+  "BUSINESS CASE": "a",
+  "COMPETITION": "ea",
+  "CONSTRAINTS": "fea",
+  "DATA & COMPLIANCE": "ea",
+  "DEPENDENCIES": "ea",
+  "SCALE": "ea",
+  "OPTIONS": "fea",
+  "TRADE-OFFS": "ea",
+  "DECISION": "fea",
+  "FIRST SLICE": "fea",
+  "ASSUMPTIONS": "ea",
+  "VERIFICATION": "ea",
+  "OBSERVABILITY": "ea",
+  "FAILURE": "fea",
+  "ROOT CAUSE — 5 WHYS": "ea",
+  "SECURITY & MISUSE": "ea",
+  "RECOVERY": "a",
+  "GOVERNANCE": "a",
+  "CONTINUITY": "a",
+  "LEGACY": "ea",
+  "RETIREMENT": "fa",
+  "RED TEAM": "ea"
+ },
+ "FUNQ": {
+  "PURPOSE": "What's the itch? What makes this interesting enough to spend time on?",
+  "SUCCESS": "What would make this feel worth the time — something you learn, see work, or can show someone?",
+  "CONSTRAINTS": "How much time are you giving it, and what's off-limits (money, tools, scope)?",
+  "FIRST SLICE": "What's the smallest version that would be fun to see working?",
+  "FAILURE": "What's most likely to stall it — or make you lose interest?",
+  "RETIREMENT": "What tells you to stop — and is it done, shelved, or promoted to a real project?"
+ },
+ "JMODES": [
+  [
+   "quick",
+   "Quick",
+   "Small builds, or a first look at any idea. 10 fixed steps."
+  ],
+  [
+   "full",
+   "Full",
+   "Anything with impact above annoying, or with money or other people."
+  ],
+  [
+   "business",
+   "Business",
+   "A business idea. Your business rules apply."
+  ],
+  [
+   "career",
+   "Career",
+   "A personal or career decision. Your career rules apply."
+  ]
+ ],
+ "QUICK": [
+  "PURPOSE",
+  "PURPOSE — 5 WHYS",
+  "NON-GOALS",
+  "SUCCESS",
+  "IMPACT",
+  "COST",
+  "OPTIONS",
+  "DECISION",
+  "ASSUMPTIONS",
+  "FAILURE"
+ ],
+ "INVESTIGATIONS": [
+  "Intelligence",
+  "Knowledge",
+  "Governance",
+  "Prediction",
+  "Physical Reality",
+  "Emergence"
+ ],
+ "FCODES": {
+  "F1": "Claims ahead of evidence",
+  "F2": "Decision made but never recorded",
+  "F3": "Every option running, none chosen",
+  "F4": "No success test, or no date",
+  "F5": "A stranger can't see it run",
+  "F6": "Costs left out of the numbers",
+  "F7": "Other people's money, data or keys",
+  "F8": "Version and naming sprawl",
+  "F9": "Only self-validated: James believes it, builds it, and judges it"
+ },
+ "VIA": {
+  "w": {
+   "purpose": 5,
+   "whys": 15,
+   "nongoals": 5,
+   "value": 5,
+   "success": 10,
+   "bizcase": 8,
+   "competition": 7,
+   "screen": 5,
+   "external": 10,
+   "verified": 5,
+   "assumptions": 5,
+   "redteam": 5,
+   "decision": 6,
+   "kill": 5,
+   "slice": 4
+  },
+  "caps": {
+   "noWhy": 30,
+   "screen3": 40,
+   "noExternal": 65,
+   "undecided": 65
+  },
+  "bands": [
+   [
+    80,
+    "Strong"
+   ],
+   [
+    60,
+    "Promising"
+   ],
+   [
+    40,
+    "Weak"
+   ],
+   [
+    0,
+    "Not viable yet"
+   ]
+  ]
+ },
+ "VERDICTS": [
+  [
+   "build",
+   "BUILD",
+   "Go. Needs a first slice and a date."
+  ],
+  [
+   "park",
+   "PARK",
+   "Good idea, wrong time. Parked on purpose, with a revisit trigger."
+  ],
+  [
+   "kill",
+   "KILL",
+   "Don't build. Needs a reason."
+  ]
+ ],
+ "REPORT_FORMAT": [
+  "PROJECT (working label): <label>",
+  "VERDICT: <BUILD — first slice: <slice> — by <date> | PARK — revisit when: <trigger> — needs to change: <change> | KILL — <reason>>",
+  "KILLED at <KEY>: <reason>   (only if killed mid-run)",
+  "Date: <YYYY-MM-DD>",
+  "Mode: <Quick | Full | Business | Career>",
+  "Investigation: <one of the six | none — why build it: <answer>>",
+  "Context: <personal | client/employer>",
+  "Kind of build: <...> (<n> of 32 steps)",
+  "Kill signal: <signal>  (check by: <when>)",
+  "Version: James Checklist v<version>",
+  "External validation: <none | n — <who> (<KEY>); ...>",
+  "Viability: <n>/100 (<band>)  [capped at <n>: <reason>]",
+  "",
+  "== THE SCREEN ==",
+  "<R#>  <PASS | FAIL | RISK>  <rule> — <reason>",
+  "Continued anyway despite <n> fails.   (only if 3+ FAIL and continued)",
+  "",
+  "== <SECTION> ==",
+  "<KEY> — <question>",
+  "<answer>",
+  "James check: <question> — <Yes | No | Not sure>",
+  "Evidence:",
+  "  [STATUS] <figure>  (source: <source>)   or  [STATUS · EXTERNAL] <figure>  (source: <who>)",
+  "",
+  "== COMPLETENESS ==",
+  "== CHECKS ==",
+  "== JAMES FLAGS ==",
+  "  - [<code>] <KEY>: <flag>",
+  "== VIABILITY ==",
+  "<part> <got>/<max> ...",
+  "Biggest gains: +<n> <what to do> (<KEY>)",
+  "== EVIDENCE SUMMARY ==",
+  "== RETRO ==   (only after a retro)"
+ ]
+}

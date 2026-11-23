@@ -2,6 +2,50 @@
 
 CHANGELOG.md — build history for the validation layer, latest entry at top.
 
+## [v0.1.1] — 2026-11-23 — frozen
+
+### Good
+- Frozen with checklist 2.3.0 (James: "freeze commit and push").
+  Headers say `0.1.1 (frozen 2026-11-23)`; VERSION 0.1.1.
+- `method_v2_3.json` was re-extracted from the frozen 2.3.0 page.
+- Tests: 43/43 on the laptop.
+
+### Bad
+- Runs 0001 and 0002 still wait for James's decisions on their findings,
+  and his verdicts.
+
+### Ugly
+- No ugly items.
+
+## [v0.1.1-dev] — 2026-11-23 — decided findings (checklist 2.3.0)
+
+### Good
+- James: "fix scoring". `validate_v0_1_1.py` (SPEC_V0_1_1.md) carries
+  checklist 2.3.0-draft:
+  - RED TEAM scores half while its findings are undecided;
+  - a new `undecided` cap of 65 holds until they are decided.
+- Runs 0001 and 0002 now score 65, not 100. Their reviews are logged
+  but their findings are undecided. Run 0003, whose findings are decided
+  and which is parked, scores 100.
+- 0.1.0 stays frozen. `tests/conftest.py` keeps its parity tests on the
+  archived 2.2.0 page.
+- Tests: 43/43 on the laptop. That includes parity with the 2.3.0 page on
+  the three real runs, now that they hold reviews.
+- Run 0003, on P20 Checkpoint, was red-teamed and parked (James: "b park
+  0003"). The finding: the VPS witness is not independent of the laptop.
+  roadmap PROPOSAL_CHECKPOINTS §9 moves to three witnesses (VPS, S24,
+  GitHub), and unwitnessed for more than 24 hours is not verified.
+
+### Bad
+- The checklist is 2.3.0-draft until James freezes it, and 0.1.1 freezes
+  with it.
+- Runs 0001 and 0002 still wait for James's decisions on their findings,
+  and his verdicts.
+
+### Ugly
+- The 2.2.0 scoring flaw showed three times before it was fixed: each
+  logged review took a run from 65 to 100.
+
 ## [v0.1.0] — 2026-11-22 — frozen; 0.2.0 agreed
 
 ### Good

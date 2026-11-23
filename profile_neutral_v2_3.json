@@ -1,0 +1,160 @@
+{
+ "generated": "Hand-written neutral profile for P19 Validation (checklist 2.3.0): the method's own checks, none of James's personal rules. James's profile lives in ~/.forge/validation/, never here.",
+ "RULES": [
+  {
+   "id": "R9",
+   "text": "Nothing confidential or restricted goes public or into a third-party AI",
+   "modes": [
+    "quick",
+    "full",
+    "business",
+    "career"
+   ]
+  }
+ ],
+ "R9_RE": {
+  "source": "\\b(confidential|classified|restricted|official[- ]sensitive)\\b",
+  "flags": "i"
+ },
+ "CONSTRAINTS_PREFILL": "",
+ "JQ": {
+  "PURPOSE": {
+   "yn": [
+    {
+     "id": "J-PAID",
+     "q": "Would I build this if nobody paid?",
+     "bad": null
+    }
+   ]
+  },
+  "PURPOSE — 5 WHYS": {
+   "check": "If you can't get past Why 3, there may be no real need underneath."
+  },
+  "NON-GOALS": {
+   "check": "Which of my rules does it rely on? (e.g. \"no selling\")"
+  },
+  "SUCCESS": {
+   "check": "F4: a number and a date."
+  },
+  "STAKEHOLDERS": {
+   "check": "Who outside me is waiting for this?"
+  },
+  "OWNERSHIP": {
+   "check": "Which named human signs this off?"
+  },
+  "OPERATIONS": {
+   "check": "Who runs it day to day, and who gets the call when it breaks?"
+  },
+  "IMPACT": {
+   "check": "Above \"annoying\" means a Full run."
+  },
+  "COST": {
+   "yn": [
+    {
+     "id": "F6",
+     "q": "Are all running costs (fees, AI calls, hosting) inside the result figures?",
+     "bad": "no",
+     "msg": "Running costs are left out of the numbers."
+    }
+   ]
+  },
+  "CONSTRAINTS": {
+   "check": "List what can't change for this project: time, money, rules, hardware, skills."
+  },
+  "DATA & COMPLIANCE": {
+   "yn": [
+    {
+     "id": "R9",
+     "q": "Is anything here confidential or restricted?",
+     "bad": "yes",
+     "msg": "Confidential or restricted material: keep this run offline. Never an AI prompt, never a public repo."
+    },
+    {
+     "id": "F7",
+     "q": "Does this touch anyone else's money, data or keys?",
+     "bad": "yes",
+     "msg": "Touches other people's money, data or keys. That's the job, not a side detail."
+    }
+   ]
+  },
+  "DEPENDENCIES": {
+   "check": "Sovereignty: which of these can't I replace or self-host?"
+  },
+  "SCALE": {
+   "check": {
+    "business": "How many customers to reach £X a month?"
+   }
+  },
+  "OPTIONS": {
+   "check": {
+    "all": "Always include \"Don't build it / park it\" as an option.",
+    "career": "At least one option that isn't a job title, and \"don't do it / park it\"."
+   }
+  },
+  "DECISION": {
+   "check": "F2: record it in full. F3: one Chosen, not several."
+  },
+  "FIRST SLICE": {
+   "check": "What's done in 30 days?"
+  },
+  "VERIFICATION": {
+   "check": {
+    "all": "Who outside me has checked any of this? Log it under Evidence as checked by someone else.",
+    "full": "Can't be skipped in this mode. Who outside me has checked any of this? Log it under Evidence as checked by someone else.",
+    "business": "Can't be skipped in this mode. Who outside me has checked any of this? A real customer beats any estimate.",
+    "career": "Can't be skipped in this mode. Who outside me has checked any of this? Someone who hires counts most."
+   }
+  },
+  "GOVERNANCE": {
+   "check": "Which named human approves changes?",
+   "yn": [
+    {
+     "id": "F8",
+     "q": "One source of truth, unambiguous names, and a freeze rule?",
+     "bad": "no",
+     "msg": "No single source of truth, clear names or freeze rule."
+    }
+   ]
+  },
+  "CONTINUITY": {
+   "yn": [
+    {
+     "id": "J-CAPSULE",
+     "q": "Is there a handover capsule?",
+     "bad": "no",
+     "msg": "No handover capsule."
+    }
+   ]
+  },
+  "LEGACY": {
+   "yn": [
+    {
+     "id": "F1",
+     "q": "Does the README claim anything the code doesn't do?",
+     "bad": "yes",
+     "msg": "The README claims more than the code does."
+    },
+    {
+     "id": "F5",
+     "q": "Can a stranger see it working in 2 minutes?",
+     "bad": "no",
+     "msg": "A stranger can't see it working in 2 minutes."
+    }
+   ]
+  },
+  "RETIREMENT": {
+   "yn": [
+    {
+     "id": "J-REPLACE",
+     "q": "Does it replace anything I'm already running?",
+     "bad": "no",
+     "msg": "Finish over start: it doesn't replace anything you're running. Which open project does it push out?"
+    }
+   ]
+  },
+  "RED TEAM": {
+   "check": "Copy the red-team prompt and give it to a fresh AI session or a person."
+  }
+ },
+ "JRULES": []
+}

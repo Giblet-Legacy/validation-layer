@@ -13,11 +13,11 @@ Function:
 Number:   P19
 Licence:  MSL-1.0
 Author:   James Gilbert (Giblets Forge)
-Status:   0.1.0 (frozen 2026-11-22), carrying checklist 2.2.0. Next: 0.2.0 (PROPOSAL_V0_2.md)
+Status:   0.1.1 (frozen 2026-11-23), carrying checklist 2.3.0. Next: 0.2.0 (PROPOSAL_V0_2.md)
 
 ## Score a run
 
-    python validate_v0_1.py runs/0001-validation-layer.run.json
+    python validate_v0_1_1.py runs/0001-validation-layer.run.json
 
 You get:
 

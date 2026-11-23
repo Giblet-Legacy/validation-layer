@@ -1,0 +1,222 @@
+{
+ "id": "validation-layer-0003",
+ "name": "checkpoints (P20)",
+ "context": "personal",
+ "jm": "full",
+ "inv": "Governance",
+ "invWhy": "",
+ "home": false,
+ "screen": {
+  "R4": {
+   "r": "pass",
+   "why": "Own time, own kit, the stack's own integrity."
+  },
+  "R9": {
+   "r": "pass",
+   "why": "Checkpoints hold hashes only."
+  }
+ },
+ "screenGo": false,
+ "jyn": {
+  "J-PAID": "yes",
+  "J-FIT": "yes",
+  "F6": "yes",
+  "R9": "no",
+  "F7": "no",
+  "F8": "yes",
+  "J-CAPSULE": "no",
+  "F1": "no",
+  "F5": "yes",
+  "J-REPLACE": "no"
+ },
+ "sev": "serious",
+ "verdict": {
+  "v": "park",
+  "reason": "",
+  "at": "",
+  "slice": "",
+  "date": "",
+  "trigger": "PROPOSAL_CHECKPOINTS §9 designed in full (crash handling, truncation, credentials, first checkpoints) and red-teamed again",
+  "change": "The witnesses must be independent of the laptop, and an unreachable witness must not count as verified after 24 hours."
+ },
+ "modes": {
+  "fun": false,
+  "eng": false,
+  "arch": true
+ },
+ "keys": [
+  "PURPOSE",
+  "PURPOSE — 5 WHYS",
+  "NON-GOALS",
+  "VALUE",
+  "SUCCESS",
+  "STAKEHOLDERS",
+  "OWNERSHIP",
+  "OPERATIONS",
+  "IMPACT",
+  "COST",
+  "BUSINESS CASE",
+  "COMPETITION",
+  "CONSTRAINTS",
+  "DATA & COMPLIANCE",
+  "DEPENDENCIES",
+  "SCALE",
+  "OPTIONS",
+  "TRADE-OFFS",
+  "DECISION",
+  "FIRST SLICE",
+  "ASSUMPTIONS",
+  "VERIFICATION",
+  "OBSERVABILITY",
+  "FAILURE",
+  "ROOT CAUSE — 5 WHYS",
+  "SECURITY & MISUSE",
+  "RECOVERY",
+  "GOVERNANCE",
+  "CONTINUITY",
+  "LEGACY",
+  "RETIREMENT",
+  "RED TEAM"
+ ],
+ "answers": [
+  "Give the five gap fixes (ledger_v3, canon_verify_v3, store_v3, record_v3, substrate_v5) the one thing they cannot provide themselves: a trusted, current checkpoint, so rollback and substitution of the Legacy's own records become detectable.",
+  {
+   "start": "Supply trusted, current checkpoints to the gap fixes.",
+   "whys": [
+    "Because each fix compares the data with a head or digest supplied from outside it, and nothing supplies one today.",
+    "Because a head read from the data itself, or an old checkpoint taken as current, cannot detect rollback (every draft SPEC says so).",
+    "Because nothing outside the data remembers what the latest state was; the ledger and store only prove their own internal chain.",
+    "Because the stack was built to prove who signed something and that it is intact, not that it is the newest version.",
+    "Because freshness needs a second, independent place that has seen the latest state: on one laptop, the data and its only memory can be rolled back together."
+   ],
+   "branches": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ]
+  },
+  "No key on the VPS.\nNo defence against a stolen owner key.\nNo automatic approval of substrate checkpoints.\nNo protection of history before the first checkpoint.",
+  "James can trust that the Legacy's ledger, store, records and substrate are the newest versions, and the Saboteur's rollback, substitution, deleted-row and unsigned-column threats can turn from red to healed.",
+  "By 2027-04-30, the rotation runs against the v3/v5 layers with checkpoints and at least 40 of the 154 known gaps show as healed, with 0 false rollback reports in 30 days of normal Legacy use.",
+  "James decides and signs. The Legacy writes checkpoints; the VPS witnesses them; the Saboteur proves them. Nobody outside James is waiting.",
+  "James owns it and signs the first checkpoints and every substrate approval.",
+  "Runs inside each Legacy write on the laptop; the witness push and comparison run on the VPS every 6 hours with the check. A failed push shows as unwitnessed in the daily report.",
+  "If it is wrong, a real rollback goes unnoticed, or a crash between writes is reported as an attack and James stops trusting the reports; records themselves are never changed by it.",
+  "James's time to sign the first checkpoints and substrate approvals, about 10 minutes a week. The witness file on the VPS is a few kilobytes.",
+  "Without it the five gap fixes cannot be switched on, so the 154 known gaps stay red; doing nothing leaves rollback and substitution of the Legacy's own records undetectable.",
+  "A signed git tag per change, a transparency log such as Sigstore Rekor, a timestamping authority, or doing nothing. Could reuse an open-source transparency log instead of the VPS witness.",
+  "No key on the VPS. Use the stack's own primitives (P2, P4, P16, P15). Frozen layers are never edited. Spare time only.",
+  "Checkpoints hold hashes, logical names and times only: no content, so they are safe on the VPS.",
+  "P2 sign, P4 ledger, P16 forge-time, P15 HAL, the VPS. All the stack's own; the VPS could be replaced by any second machine.",
+  "One checkpoint per write: a few hundred a month, each a few hundred bytes; at 10x still small.",
+  "1. P20 Checkpoint: a P4 ledger of signed checkpoints with the VPS as witness\n2. A signed git tag per change, pushed to GitHub\n3. Reuse an open-source transparency log (Sigstore Rekor)\n4. Don't build it, park it: leave the fixes switched off",
+  "Option 1 is the stack's own primitives and needs one coordinated write. Git tags per write are heavy and public. A public transparency log is a third-party dependency with public entries. Parking keeps all 154 gaps red.",
+  {
+   "chosen": "P20 Checkpoint: a P4 ledger of signed checkpoints with the VPS as witness",
+   "rejected": "Git tags per change; a public transparency log; park it",
+   "reason": "It uses primitives the stack already trusts, keeps entries private to the stack, and the VPS already runs every 6 hours with no key.",
+   "downside": "One coordinated write in the Legacy, and freshness is unwitnessed while the laptop is offline.",
+   "trigger": "If more than 2 false rollback reports occur in 30 days of normal use, stop and redesign the coordinated write."
+  },
+  "The checkpoint log and the VPS witness, with prefix-plus-extension in ledger_v3 and store_v3, proven by the Saboteur on fixtures, by 2027-02-28.",
+  "A crash between the data write and the checkpoint write is rare and leaves a valid extension.\nThe VPS can keep a witness file and compare sequence numbers with no key.\nJames will sign substrate approvals within a week of each candidate.",
+  "The Saboteur kills the process between the data write and the checkpoint write on fixtures and checks the extension is accepted; a test against the VPS witness compares sequence numbers with no key present; the daily report shows how long each substrate candidate waits for James to sign.",
+  "The daily report lists each subject's checkpoint sequence, witness status (witnessed or unwitnessed) and any rollback or fork; a substrate candidate waiting for signature shows its age.",
+  "A crash between the data write and the checkpoint write is reported as a rollback, so James stops trusting the reports.",
+  {
+   "start": "A crash between writes is reported as a rollback.",
+   "whys": [
+    "Because the verifier demands the data head equal the checkpoint exactly.",
+    "Because the drafts compare for equality and have no prefix-plus-extension mode.",
+    "Because the drafts were written before writes and checkpoints were coordinated.",
+    "",
+    ""
+   ],
+   "branches": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ]
+  },
+  "Someone with the owner key can forge checkpoints; someone who controls the VPS can refuse pushes, which shows as unwitnessed; replaying an old checkpoint is caught by the sequence number and the witness.",
+  "Add the prefix-plus-extension mode to the drafts so a crash between writes is accepted as a valid extension, and record each such crash in the daily report.",
+  "James approves every freeze and signs the first checkpoints and substrate approvals; the checkpoint ledger is the one source of truth; the CHANGELOG records each change.",
+  "The checkpoint ledger and the witness explain themselves to anyone with the public key; no handover capsule yet.",
+  "One command shows each subject's checkpoint, witness state and whether the data verifies against it.",
+  {
+   "signal": "By 2027-04-30 fewer than 40 known gaps are healed, or more than 2 false rollback reports occur in any 30 days",
+   "checkby": "2027-04-30",
+   "then": "James decides: redesign the coordinated write, or park P20 and leave the fixes off."
+  },
+  {
+   "reviewer": "A fresh AI agent (Claude) that never saw the answers or how they were written; it checked claims against the stack's documents, read-only, 2026-11-23. Its facts were re-checked against the documents before use.",
+   "found": "1. SECURITY & MISUSE / DECISION: the VPS witness is not independent of the laptop. The laptop already syncs whole databases there and holds the SSH and sudo path into it (roadmap/VPS.md rules 1 and 3), so whoever can roll back the laptop can usually rewrite the witness too. The witness would compare seq numbers without checking signatures, so a high-seq poison blocks every later verify. Re-checked: true.\n2. OPERATIONS / SUCCESS: 'unwitnessed' counts as a pass, so roll back and then block the push. The run says the witness compares every 6 hours; the proposal says after every checkpoint. An unattended push after every write needs a new credential on the laptop (the current sync asks for a passphrase and sudo), which neither document designs.\n3. RECOVERY / ROOT CAUSE: records and substrate stay exact-match, so a crash between a record write and its checkpoint still reads as rollback; prefix-plus-extension lets data written after the last checkpoint be truncated undetected; a torn half-line is not a valid signed extension.\nAssumed as fact: 'primitives the stack already trusts' (ledger_v3, store_v3 and hal_v3 are drafts; re-checked true for hal_v3); Rekor rejected for public entries while the proposal calls checkpoints public data (re-checked: true); '10 minutes a week'; '40 of 154 healed'; 'a few hundred a month'; replay caught only while the witness is reachable and honest, and a fork at an equal seq is not covered; first checkpoints vouched for by frozen verifiers with a known rollback gap (0011).",
+   "changing": "Witnesses: three (VPS, S24, GitHub) instead of the VPS alone; each checks signatures and keeps only a higher seq; below any witness or a fork at equal seq FAILS; unwitnessed over 24 hours is STALE, not verified (PROPOSAL_CHECKPOINTS §9). Still to design: crash handling for records and substrate, truncation after the last checkpoint, torn lines, push credentials, cross-checking first checkpoints against the VPS's older copies.",
+   "rejected": "None rejected."
+  }
+ ],
+ "evidence": [
+  [
+   {
+    "fig": "Each of the five draft SPECs requires an independently trusted, current checkpoint",
+    "status": "verified",
+    "src": "ledger-layer/SPEC_V3.md, canon-verify-layer/SPEC_V3.md, store-layer/SPEC_V3.md, record-layer/SPEC_V3.md, substrate-layer/SPEC_V5.md",
+    "by": "self"
+   }
+  ],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   {
+    "fig": "154 known gaps red",
+    "status": "verified",
+    "src": "the-saboteur known_gaps_v1_1.json",
+    "by": "self"
+   }
+  ],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+ ],
+ "retro": {
+  "result": "",
+  "happened": "",
+  "success": {},
+  "assumptions": {},
+  "kill": "",
+  "step": "",
+  "lesson": ""
+ },
+ "format": "james-checklist-run",
+ "version": "2.2.0",
+ "savedAt": "2026-11-23T00:00:00Z"
+}

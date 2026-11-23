@@ -153,8 +153,8 @@
    "then": "James decides: keep it as advice, or retire it to the archive."
   },
   {
-   "reviewer": "",
-   "found": "",
+   "reviewer": "A fresh AI agent (Claude) that never saw the answers or how they were written; it checked claims against the stack's code, read-only, 2026-11-22. Its own facts are logged as claims and were re-checked against the code before use.",
+   "found": "1. PURPOSE / BUSINESS CASE: the trigger (a run for each new layer or major version, SPEC.md) would not have caught the Saboteur's 0.x chain the layer was built for. Re-checked: true.\n2. VERIFICATION: '13 of 13 parity tests' is a true count but overstates: 12 are synthetic fixtures; neither real run is in the parity test. The work-material check is a word list, so anything off it passes. Re-checked: true.\n3. ROOT CAUSE / OBSERVABILITY / DECISION trigger: parity only runs where the private page is, and nothing runs it on a timer, so drift is silent and the 'parity fails twice a month' trigger cannot fire. Re-checked: true.\nAssumed as fact: 'before code exists' (this run was drafted after the code); 'most of a day'; '30 minutes per run'; 'HAL judges actions, not decisions'.",
    "changing": "",
    "rejected": ""
   }
