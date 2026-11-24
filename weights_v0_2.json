@@ -1,0 +1,126 @@
+{
+ "format": "p19-weights",
+ "version": "0.2.0-dev",
+ "status": "DRAFT: the weights, half-lives, thresholds and entry points are judgements (PROPOSAL_V0_2_1 §7, §8.1-2); James reviews them with the first dry run, and they are recalibrated after 90 days of outcomes.",
+ "time_unit": "days",
+ "kinds": {
+  "primitive": {
+   "half_life_days": 365
+  },
+  "tool": {
+   "half_life_days": 120
+  },
+  "consumer": {
+   "half_life_days": 60
+  },
+  "project": {
+   "half_life_days": 60
+  },
+  "product": {
+   "half_life_days": 60
+  },
+  "business": {
+   "half_life_days": 30
+  },
+  "career": {
+   "half_life_days": 90
+  }
+ },
+ "evidence": {
+  "reached_on_real_path": {
+   "value": 1.2,
+   "confidence": 0.5,
+   "bears_on": "PURPOSE"
+  },
+  "tests_pass": {
+   "value": 1.1,
+   "confidence": 0.3,
+   "bears_on": "CONFORMS"
+  },
+  "tests_fail": {
+   "value": 0.6,
+   "confidence": 0.8,
+   "bears_on": "CONFORMS"
+  },
+  "saboteur_no_gap": {
+   "value": 1.1,
+   "confidence": 0.3,
+   "bears_on": "CONFORMS"
+  },
+  "saboteur_gap": {
+   "value": 0.6,
+   "confidence": 0.8,
+   "bears_on": "CONFORMS"
+  },
+  "agent_check_fails": {
+   "value": 0.7,
+   "confidence": 0.6,
+   "bears_on": "CONFORMS"
+  },
+  "success_test_held": {
+   "value": 1.5,
+   "confidence": 1.0,
+   "bears_on": "SUCCESS"
+  },
+  "success_test_failed": {
+   "value": 0.5,
+   "confidence": 1.0,
+   "bears_on": "SUCCESS"
+  },
+  "kill_signal_fired": {
+   "value": 0.3,
+   "confidence": 1.0,
+   "bears_on": "RETIREMENT"
+  },
+  "outside_check": {
+   "value": 1.5,
+   "confidence": 1.0,
+   "bears_on": "ANY"
+  },
+  "hal_keep_seal": {
+   "value": 1.8,
+   "confidence": 1.0,
+   "bears_on": "ANY"
+  }
+ },
+ "readings": {
+  "holds_at_or_above": 1.05,
+  "doubted_at_or_below": 0.95
+ },
+ "entry_points": [
+  {
+   "path": "the-legacy/boot_v2_1.py",
+   "why": "the Legacy 2.1.0: laptop and the VPS service (run-latest picks the highest frozen boot)"
+  },
+  {
+   "path": "explorer-d334-forge/forge_cli_v1_8.py",
+   "why": "the Cockpit 1.8.0, James's terminal"
+  },
+  {
+   "path": "agent-layer/agents.py",
+   "why": "the agents: the laptop catch-up run"
+  },
+  {
+   "path": "the-saboteur/saboteur_v1_1.py",
+   "why": "the Saboteur rotation slot (the VPS check_v3, once James runs it)"
+  },
+  {
+   "path": "the-saboteur/saboteur_report_v1_1.py",
+   "why": "the Saboteur daily report (the VPS check_v3)"
+  }
+ ],
+ "skip_dirs_matching": [
+  "^archive$",
+  "^tests?$",
+  "^fixture",
+  "^__pycache__$",
+  "^\\.",
+  "^node_modules$",
+  "^results$",
+  "^development_tests$"
+ ],
+ "skip_files_matching": [
+  "^test_",
+  "^conftest\\.py$"
+ ]
+}

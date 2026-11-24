@@ -2,6 +2,33 @@
 
 CHANGELOG.md — build history for the validation layer, latest entry at top.
 
+## [v0.2.0-dev] — 2026-11-24 — first slice: relevance (dry run)
+
+### Good
+- James: "validation 0.2.0". `relevance_v0_2.py` (SPEC_V0_2.md) builds
+  the import graph from five real entry points, follows sys.path,
+  FORGE_LEGACY_ROOT, importlib and script-path wiring, and computes λ
+  per claim through Leighton V3. Dry run only; it writes nothing.
+- `weights_v0_2.json` is the one weights file (all drafts).
+- James, "yes all commit": hand check accepted; CONFORMS claims
+  confirmed as `claims/<repo>.claims_v2.json` (v1 kept); `load_claims`
+  takes the latest version per layer. Weights and entry points kept as
+  drafts.
+- Tests: 53/53 (10 new).
+
+### Bad
+- First dry run: 2 of 5 predictions missed. canon-verify is reached
+  (the Cockpit loads it), so it holds, not unknown. "store: used but
+  doubted" splits into PURPOSE holds and CONFORMS doubted. Sign's
+  CONFORMS is doubted too (30 known gaps).
+- Evidence is one observation per gap class, whatever the count.
+
+### Ugly
+- Six repositories without a claim are not reached on any real path:
+  forge-gate, forge-time, keystone_gate, mediator-layer, seed, self-layer.
+  Each is either a real "why is this here?" or a missed path, for James
+  to check by hand.
+
 ## [v0.1.1] — 2026-11-23 — frozen
 
 ### Good

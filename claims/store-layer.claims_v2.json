@@ -1,0 +1,31 @@
+{
+ "format": "p19-claims",
+ "version": 2,
+ "entity": "store-layer",
+ "name": "P8 Store",
+ "kind": "primitive",
+ "half_life_days": 365,
+ "claims": [
+  {
+   "id": "store-layer/PURPOSE",
+   "says": "The P4 ledger's records are kept in SQLite under the same hash-chain and signature rules, so they can be queried fast by seq, hash or signer instead of read line by line.",
+   "source": "store-layer/SPEC.md §1 (the store rule); SPEC_V2_1.md (current 2.1.0).",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yes to all and commit\" on claims/FIRST_CLAIMS_DRAFT.md",
+   "expected_dry_run": "used, but doubted. Reached on a real path (the Legacy's live store.db), while the Saboteur's open gaps against it (rollback, non-canonical records) count against it until store_v3 and checkpoints (P20) land."
+  },
+  {
+   "id": "store-layer/CONFORMS",
+   "says": "It conforms to the stack's rules: its tests pass, the Saboteur finds no gap in it, and its files follow the naming, header and archive rules.",
+   "source": "PROPOSAL_V0_2_1.md §3 ('That it conforms | the stack's rules'); SPEC_V0_2.md §3-4",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yes all commit\" to the first dry run's decision 2 (confirmed CONFORMS claims)",
+   "expected_dry_run": "doubted: the Saboteur's 23 known gaps against store_v2_1 (dup-key, non-canonical, rollback), seen in the first dry run."
+  }
+ ],
+ "supersedes": "claims/store-layer.claims_v1.json (kept)"
+}

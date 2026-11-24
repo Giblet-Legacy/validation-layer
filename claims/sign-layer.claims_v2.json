@@ -1,0 +1,31 @@
+{
+ "format": "p19-claims",
+ "version": 2,
+ "entity": "sign-layer",
+ "name": "P2 Sign",
+ "kind": "primitive",
+ "half_life_days": 365,
+ "claims": [
+  {
+   "id": "sign-layer/PURPOSE",
+   "says": "The stack has one rule for signing: a capsule is signed with Ed25519 over its canonical bytes with `\"signature\": null`, and any other file gets a detached sidecar, so anything the stack makes can be checked against a did:key.",
+   "source": "sign-layer/SPEC.md §1 (the capsule signing rule) and its Function (\"the capsule signing rule and the detached artefact sidecar rule\"); SPEC_V2.md (sign_v2, the strict layer, current 2.0.0).",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yes to all and commit\" on claims/FIRST_CLAIMS_DRAFT.md",
+   "expected_dry_run": "holds. Reached from the Legacy's boot through most layers. If the dry run asks about it, the import graph is broken."
+  },
+  {
+   "id": "sign-layer/CONFORMS",
+   "says": "It conforms to the stack's rules: its tests pass, the Saboteur finds no gap in it, and its files follow the naming, header and archive rules.",
+   "source": "PROPOSAL_V0_2_1.md §3 ('That it conforms | the stack's rules'); SPEC_V0_2.md §3-4",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yes all commit\" to the first dry run's decision 2 (confirmed CONFORMS claims)",
+   "expected_dry_run": "doubted: the Saboteur's 30 known gaps against sign_v2 (dup-key, substitution), seen in the first dry run."
+  }
+ ],
+ "supersedes": "claims/sign-layer.claims_v1.json (kept)"
+}
