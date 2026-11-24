@@ -1,0 +1,18 @@
+{
+ "format": "p19-answers",
+ "version": 1,
+ "given_by": "James Gilbert",
+ "given_on": "2026-11-24",
+ "given_how": "\"retire, keep, retire, stay, correct\", to the dry run's five questions after c86665e",
+ "signed": false,
+ "note": "Recorded, unsigned. A HAL keep seal (PROPOSAL_V0_2_1 §6) is the signed form and is not built yet, so these answers are shown beside their claims and are NOT counted as evidence. Retiring is a separate step James approves; nothing is moved or archived by this file.",
+ "answers": [
+  {"entity": "forge-gate", "answer": "retire", "reason": "Not deployed; the VPS is fed by sync_legacy_to_vps.py, not the Gate."},
+  {"entity": "keystone_gate", "answer": "keep", "reason": ""},
+  {"entity": "seed", "answer": "retire", "reason": "A one-off bootstrap; its first job is done."},
+  {"entity": "forge-time", "answer": "keep", "reason": "Stays: comes alive with the first consumer usage digest (through P17 Mediator)."},
+  {"entity": "mediator-layer", "answer": "keep", "reason": "Stays: comes alive with the first consumer usage digest."},
+  {"entity": "self-layer", "answer": "wait", "reason": "Correct to stay unknown until its design is signed off and built."},
+  {"entity": "consumer", "answer": "wait", "reason": "Correct to stay unknown until its spec is signed off and built."}
+ ]
+}

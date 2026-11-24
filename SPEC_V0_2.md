@@ -23,6 +23,7 @@ Author:   James Gilbert (Giblets Forge)
 | `claims/<repo>.claims_vN.json` | The confirmed claims, one file per layer and version, never edited; the highest N is used. v1: PURPOSE; v2 adds CONFORMS (James, 2026-11-24). |
 | The sibling repositories | `--root`, else `FORGE_LEGACY_ROOT`, else this layer's parent. |
 | `the-saboteur/known_gaps_v1_1.json`, `threats_v1/` | Which layer each attack targets and which attacks are known gaps. |
+| `answers/answers_<date>_vN.json` | James's recorded answers (keep, retire, consolidate, park, revise, wait), the latest per entity. **Unsigned: shown beside the claim, never counted as evidence**; the HAL keep seal is the signed form (§7). |
 | `leighton-engine-layer/leighton_engine_v3.py` | P14 V3, loaded from the sibling layer, not copied. |
 
 ## 2. The import graph
@@ -103,3 +104,5 @@ entities that are not code.
 - 2026-11-24: James, "yes all commit" after the first dry run: the hand
   check of the five layers accepted; CONFORMS claims confirmed (claims v2);
   weights, thresholds and entry points kept as drafts; committed.
+- 2026-11-24: recorded answers (James: "retire, keep, retire, stay,
+  correct") are read from `answers/` and shown, never counted as evidence.

@@ -41,6 +41,7 @@ Public API:
     5. judge(claims, ev, weights, now) -> [dict]
     6. dry_run(root, weights=None, claims=None, now=None) -> dict
     7. main(argv=None) -> int
+    12. load_answers(layer_dir=None) -> {entity: answer}   (unsigned; shown, never evidence)
 
 Internal helpers:
     8. _scan(path) -> dict, 9. _leighton(root), 10. _git_time(path), 11. _text(result)
@@ -340,10 +341,34 @@ def judge(claims, ev, weights, now, leighton):
 
 
 # ---------------------------------------------------------------------------
+# 12. load_answers — James's recorded answers (answers/answers_<date>_vN.json),
+#     the latest per entity by date then file name. Unsigned: shown beside
+#     the claim, never counted as evidence (a HAL keep seal is the signed
+#     form, not built yet).
+# ---------------------------------------------------------------------------
+ANSWERS_DIR = HERE / "answers"
+
+
+def load_answers(layer_dir=None):
+    d = pathlib.Path(layer_dir) / "answers" if layer_dir else ANSWERS_DIR
+    out = {}
+    for f in sorted(d.glob("answers_*_v*.json")) if d.is_dir() else []:
+        doc = json.loads(f.read_text(encoding="utf-8"))
+        if doc.get("format") != "p19-answers":
+            raise ValueError(f"{f}: not a p19-answers file")
+        for a in doc["answers"]:
+            if a.get("answer") not in ("keep", "retire", "consolidate", "park", "revise", "wait"):
+                raise ValueError(f"{f}: unknown answer {a.get('answer')!r} for {a.get('entity')}")
+            out[a["entity"]] = {**a, "given_on": doc["given_on"], "signed": bool(doc.get("signed")), "file": f.name}
+    return out
+
+
+# ---------------------------------------------------------------------------
 # 6. dry_run — the whole slice, read only.
 # ---------------------------------------------------------------------------
-def dry_run(root, weights=None, claims=None, now=None):
+def dry_run(root, weights=None, claims=None, now=None, answers=None):
     weights = weights or load_weights()
+    answers = load_answers() if answers is None else answers
     claims = load_claims() if claims is None else claims
     now = float(now if now is not None else datetime.datetime.now(datetime.timezone.utc).timestamp())
     g = Graph(root, weights)
@@ -353,7 +378,8 @@ def dry_run(root, weights=None, claims=None, now=None):
         "dry_run": True, "now": datetime.datetime.fromtimestamp(now, datetime.timezone.utc).isoformat(),
         "weights_version": weights["version"],
         "entry_points": [e["path"] for e in weights["entry_points"]],
-        "claims": judge(claims, ev, weights, now, _leighton(root)),
+        "claims": [{**c, "answer": answers.get(c["entity"])}
+                   for c in judge(claims, ev, weights, now, _leighton(root))],
         "repos": {r: {"reached": r in reached, "chain": reached.get(r)} for r in g.repos},
         "ambiguous": dict(sorted(g.ambiguous.items())),
     }
@@ -371,6 +397,10 @@ def _text(r):
                  + ("  (provisional: no confirmed claim)" if c["status"] == "provisional" else ""))
         if c["status"] != "provisional":
             L.append(f"      predicted: {c['expected_dry_run']}")
+        a = c.get("answer")
+        if a and c["key"] == "PURPOSE":
+            L.append(f"      answered: {a['answer'].upper()} (unsigned, {a['given_on']}; not counted as evidence)"
+                     + (f": {a['reason']}" if a.get("reason") else ""))
         for o in c["evidence"]:
             L.append(f"      - {o['kind']} ({o['value']}, {o['confidence']}): {o['note']}")
     L += ["", "== REACHED ON A REAL PATH (check by hand) =="]

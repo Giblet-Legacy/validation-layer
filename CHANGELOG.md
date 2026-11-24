@@ -17,7 +17,11 @@ CHANGELOG.md — build history for the validation layer, latest entry at top.
 - Six more layers claimed (James: "yas all commit"): forge-time,
   mediator-layer, self-layer (primitive); forge-gate, keystone_gate, seed
   (tool). Eleven layers now; all six read unknown, as predicted.
-- Tests: 53/53 (10 new).
+- James's first answers recorded (answers/answers_2026-11-24_v1.json,
+  unsigned): forge-gate retire, keystone_gate keep, seed retire,
+  forge-time and mediator-layer keep, self-layer and consumer wait. The
+  dry run shows them; they are not evidence.
+- Tests: 54/54 (11 new).
 
 ### Bad
 - First dry run: 2 of 5 predictions missed. canon-verify is reached

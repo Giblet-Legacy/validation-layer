@@ -17,6 +17,7 @@ Function:
     8. test_cli_exit_codes
     9. test_real_weights_and_claims_load
     10. test_latest_claims_version_wins
+    11. test_answers_are_shown_never_evidence
 
 Tier:     P19 Validation, 0.2.0 (first slice)
 Spec:     SPEC_V0_2.md 0.2.0-dev
@@ -182,3 +183,22 @@ def test_latest_claims_version_wins(tmp_path):
     (tmp_path / "claims" / "x-layer.claims_v3.json").write_text(json.dumps(bad), encoding="utf-8")
     with pytest.raises(ValueError):
         rv.load_claims(tmp_path)
+
+
+# 11.
+def test_answers_are_shown_never_evidence(ws, tmp_path):
+    d = tmp_path / "lay"
+    (d / "answers").mkdir(parents=True)
+    doc = {"format": "p19-answers", "version": 1, "given_on": "2026-11-24", "signed": False,
+           "answers": [{"entity": "e-layer", "answer": "retire", "reason": "done"}]}
+    (d / "answers" / "answers_2026-11-24_v1.json").write_text(json.dumps(doc), encoding="utf-8")
+    answers = rv.load_answers(d)
+    r = rv.dry_run(ws, _weights(), [_claim("e-layer", "tool")], now=NOW, answers=answers)
+    purpose = next(c for c in r["claims"] if c["key"] == "PURPOSE")
+    assert purpose["answer"]["answer"] == "retire" and purpose["answer"]["signed"] is False
+    assert (purpose["lambda"], purpose["reading"], purpose["evidence"]) == (1.0, "unknown", [])
+    doc["answers"][0]["answer"] = "delete it"
+    (d / "answers" / "answers_2026-11-24_v1.json").write_text(json.dumps(doc), encoding="utf-8")
+    with pytest.raises(ValueError):
+        rv.load_answers(d)
+    assert rv.load_answers(tmp_path / "nowhere") == {}
