@@ -1,0 +1,30 @@
+{
+ "format": "p19-claims",
+ "version": 1,
+ "entity": "seed",
+ "name": "the seed",
+ "kind": "tool",
+ "half_life_days": 120,
+ "claims": [
+  {
+   "id": "seed/PURPOSE",
+   "says": "The first claims about James and his repositories, drafted from the repositories' own files, are signed into his own Forge one yes at a time. Each one goes through the Cockpit's commit path and is sealed with HAL, and the passphrase is never stored.",
+   "source": "seed/sign_seed.py header (there is no README, SPEC or VERSION).",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown. It is a one-off bootstrap that you run by hand. When every claim in `seed_claims.json` is signed, its job is done, so this is the most likely of the six to be retired to the archive, unless it is kept as the way to sign future seed files."
+  },
+  {
+   "id": "seed/CONFORMS",
+   "says": "It conforms to the stack's rules: its tests pass, the Saboteur finds no gap in it, and its files follow the naming, header and archive rules.",
+   "source": "PROPOSAL_V0_2_1.md §3; SPEC_V0_2.md §3-4 (the standard wording of claims v2)",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown: no tests, no attacks."
+  }
+ ]
+}

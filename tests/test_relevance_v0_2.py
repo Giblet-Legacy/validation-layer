@@ -158,10 +158,12 @@ def test_cli_exit_codes(ws, capsys, monkeypatch):
 def test_real_weights_and_claims_load():
     w = rv.load_weights()
     claims = rv.load_claims()
-    assert {c["entity"] for c in claims} == {"sign-layer", "store-layer", "canon-verify-layer", "the-saboteur", "consumer"}
+    assert {c["entity"] for c in claims} == {"sign-layer", "store-layer", "canon-verify-layer", "the-saboteur", "consumer",
+                                             "forge-time", "mediator-layer", "forge-gate", "keystone_gate", "seed",
+                                             "self-layer"}
     assert all(c["kind"] in w["kinds"] for c in claims)
-    assert all(c["version"] == 2 and {x["id"].split("/")[1] for x in c["claims"]} == {"PURPOSE", "CONFORMS"}
-               for c in claims)
+    assert all({x["id"].split("/")[1] for x in c["claims"]} == {"PURPOSE", "CONFORMS"} for c in claims)
+    assert all(x["status"] == "confirmed" for c in claims for x in c["claims"])
     for e in w["evidence"].values():
         assert 0 < e["value"] and 0 <= e["confidence"] <= 1
 

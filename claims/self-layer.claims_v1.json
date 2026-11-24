@@ -1,0 +1,30 @@
+{
+ "format": "p19-claims",
+ "version": 1,
+ "entity": "self-layer",
+ "name": "P18 Self",
+ "kind": "primitive",
+ "half_life_days": 365,
+ "claims": [
+  {
+   "id": "self-layer/PURPOSE",
+   "says": "Each repository can explain itself: it finds and cites its own files, hands a question about something else to the repository that owns it (\"not mine, ask X\"), and passes the explaining to a model through ai-gate, so the answer is an assumption, not a fact.",
+   "source": "self-layer/DESIGN.md Function and §1 (proposed; the roadmap has no P18 yet).",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown. It is a design only, waiting on your sign-off, with no code and nothing to reach. Like consumer, it is a claim about something not yet built."
+  },
+  {
+   "id": "self-layer/CONFORMS",
+   "says": "It conforms to the stack's rules: its tests pass, the Saboteur finds no gap in it, and its files follow the naming, header and archive rules.",
+   "source": "PROPOSAL_V0_2_1.md §3; SPEC_V0_2.md §3-4 (the standard wording of claims v2)",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown: nothing is built."
+  }
+ ]
+}

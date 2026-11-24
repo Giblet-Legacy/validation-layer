@@ -1,0 +1,30 @@
+{
+ "format": "p19-claims",
+ "version": 1,
+ "entity": "forge-gate",
+ "name": "The Gate (Tier 4)",
+ "kind": "tool",
+ "half_life_days": 120,
+ "claims": [
+  {
+   "id": "forge-gate/PURPOSE",
+   "says": "Devices sync through one append-only, hash-chained ledger on a relay rather than a shared database. Each device pushes signed entries, pulls the ones it is missing, verifies them with P6, and replays them into its own SQLite.",
+   "source": "forge-gate/README.md Function and \"Why not SQLite over the network?\"; SPEC.md 1.0.0.",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown, and a real question. The README says it \"does not establish that the gate is deployed or running\". The VPS today is fed by `sync_legacy_to_vps.py`, which copies whole databases, not by the Gate. So the Gate is either the future multi-device path or overtaken by the sync script. Its other tie is P20: the checkpoint witnesses also want a ledger held off the laptop."
+  },
+  {
+   "id": "forge-gate/CONFORMS",
+   "says": "It conforms to the stack's rules: its tests pass, the Saboteur finds no gap in it, and its files follow the naming, header and archive rules.",
+   "source": "PROPOSAL_V0_2_1.md §3; SPEC_V0_2.md §3-4 (the standard wording of claims v2)",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown: not attacked by the Saboteur; no VPS test evidence in the first slice."
+  }
+ ]
+}

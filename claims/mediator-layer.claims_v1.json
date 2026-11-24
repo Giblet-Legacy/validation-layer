@@ -1,0 +1,30 @@
+{
+ "format": "p19-claims",
+ "version": 1,
+ "entity": "mediator-layer",
+ "name": "P17 Mediator",
+ "kind": "primitive",
+ "half_life_days": 365,
+ "claims": [
+  {
+   "id": "mediator-layer/PURPOSE",
+   "says": "The stack grows without changing itself: it reads the digests that consumers export, judges how mature each reported field is, and proposes an unsigned spine update to HAL and James for any field that has become Fact. It never merges, signs or edits a layer.",
+   "source": "mediator-layer/SPEC.md Function and §1.",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown. Its input is consumer digests, and no consumer is built yet. It will stay unknown until the consumer runtime writes its first usage digest."
+  },
+  {
+   "id": "mediator-layer/CONFORMS",
+   "says": "It conforms to the stack's rules: its tests pass, the Saboteur finds no gap in it, and its files follow the naming, header and archive rules.",
+   "source": "PROPOSAL_V0_2_1.md §3; SPEC_V0_2.md §3-4 (the standard wording of claims v2)",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown: no attacks or VPS test evidence in the first slice."
+  }
+ ]
+}

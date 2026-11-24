@@ -1,0 +1,30 @@
+{
+ "format": "p19-claims",
+ "version": 1,
+ "entity": "forge-time",
+ "name": "P16 Time",
+ "kind": "primitive",
+ "half_life_days": 365,
+ "claims": [
+  {
+   "id": "forge-time/PURPOSE",
+   "says": "The stack signs one timestamp format (ISO 8601 UTC to the second, with a literal Z) and one scp_id rule, kept in one tested copy so that no layer or consumer needs its own regex.",
+   "source": "forge-time/SPEC.md Function and §1–2.",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown. It is reached only through Mediator, and nothing reaches Mediator."
+  },
+  {
+   "id": "forge-time/CONFORMS",
+   "says": "It conforms to the stack's rules: its tests pass, the Saboteur finds no gap in it, and its files follow the naming, header and archive rules.",
+   "source": "PROPOSAL_V0_2_1.md §3; SPEC_V0_2.md §3-4 (the standard wording of claims v2)",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown: no attacks or VPS test evidence in the first slice."
+  }
+ ]
+}

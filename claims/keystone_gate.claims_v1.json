@@ -1,0 +1,30 @@
+{
+ "format": "p19-claims",
+ "version": 1,
+ "entity": "keystone_gate",
+ "name": "Keystone Gate",
+ "kind": "tool",
+ "half_life_days": 120,
+ "claims": [
+  {
+   "id": "keystone_gate/PURPOSE",
+   "says": "Semantic capsules are validated, mutated (merged, split) and their lineage tracked under governance, from a capsule primitives registry and a cache.",
+   "source": "keystone_gate/README.md (\"A governed semantic-capsule validation, mutation, and lineage-tracking system\"; \"Current repository (1.1.0)\").",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown, and a real question. Its own README says that similarity and several mutations are placeholders, and that `lineage` and `list` are placeholder commands. It came over from the-full-stack, which is now reference only. Nothing on a real path loads it (the one apparent link, a `\"__main__\"` string, was a false edge and has been removed)."
+  },
+  {
+   "id": "keystone_gate/CONFORMS",
+   "says": "It conforms to the stack's rules: its tests pass, the Saboteur finds no gap in it, and its files follow the naming, header and archive rules.",
+   "source": "PROPOSAL_V0_2_1.md §3; SPEC_V0_2.md §3-4 (the standard wording of claims v2)",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yas all commit\" on claims/NEXT_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown: not attacked by the Saboteur; no VPS test evidence in the first slice."
+  }
+ ]
+}

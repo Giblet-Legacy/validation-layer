@@ -14,6 +14,9 @@ CHANGELOG.md — build history for the validation layer, latest entry at top.
   confirmed as `claims/<repo>.claims_v2.json` (v1 kept); `load_claims`
   takes the latest version per layer. Weights and entry points kept as
   drafts.
+- Six more layers claimed (James: "yas all commit"): forge-time,
+  mediator-layer, self-layer (primitive); forge-gate, keystone_gate, seed
+  (tool). Eleven layers now; all six read unknown, as predicted.
 - Tests: 53/53 (10 new).
 
 ### Bad
