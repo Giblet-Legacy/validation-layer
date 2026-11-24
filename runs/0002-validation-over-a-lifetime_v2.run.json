@@ -1,0 +1,222 @@
+{
+ "id": "validation-layer-0002",
+ "name": "validation over a lifetime, for any entity (P19 0.2.0)",
+ "context": "personal",
+ "jm": "full",
+ "inv": "Governance",
+ "invWhy": "",
+ "home": false,
+ "screen": {
+  "R4": {
+   "r": "pass",
+   "why": "Own time, own kit, the stack's own governance."
+  },
+  "R9": {
+   "r": "pass",
+   "why": "Evidence about the stack's own code only."
+  }
+ },
+ "screenGo": false,
+ "jyn": {
+  "J-PAID": "yes",
+  "J-FIT": "yes",
+  "F6": "yes",
+  "R9": "no",
+  "F7": "no",
+  "F8": "yes",
+  "J-CAPSULE": "no",
+  "F1": "no",
+  "F5": "yes",
+  "J-REPLACE": "no"
+ },
+ "sev": "annoying",
+ "verdict": {
+  "v": "build",
+  "reason": "The three red-team changes are in the design; the first slice is a dry run James reviews before anything is shown daily.",
+  "at": "",
+  "slice": "The import graph (following sys.path.insert, FORGE_LEGACY_ROOT and importlib) and 'reached on a real path', claims from runs and SPECs, λ through Leighton V3, and the Relevance section in the daily report, by 2027-01-31.",
+  "date": "2027-01-31",
+  "trigger": "More than 3 questions in the first 30 days come from a broken measurement: stop and recalibrate.",
+  "change": ""
+ },
+ "modes": {
+  "fun": false,
+  "eng": false,
+  "arch": true
+ },
+ "keys": [
+  "PURPOSE",
+  "PURPOSE — 5 WHYS",
+  "NON-GOALS",
+  "VALUE",
+  "SUCCESS",
+  "STAKEHOLDERS",
+  "OWNERSHIP",
+  "OPERATIONS",
+  "IMPACT",
+  "COST",
+  "BUSINESS CASE",
+  "COMPETITION",
+  "CONSTRAINTS",
+  "DATA & COMPLIANCE",
+  "DEPENDENCIES",
+  "SCALE",
+  "OPTIONS",
+  "TRADE-OFFS",
+  "DECISION",
+  "FIRST SLICE",
+  "ASSUMPTIONS",
+  "VERIFICATION",
+  "OBSERVABILITY",
+  "FAILURE",
+  "ROOT CAUSE — 5 WHYS",
+  "SECURITY & MISUSE",
+  "RECOVERY",
+  "GOVERNANCE",
+  "CONTINUITY",
+  "LEGACY",
+  "RETIREMENT",
+  "RED TEAM"
+ ],
+ "answers": [
+  "Ask, before and across the life of anything James builds (a stack layer, a project, a product, a business idea), whether it should be built, whether it is still used, still conforms and still has a reason to be here.",
+  {
+   "start": "Keep asking whether each layer still earns its place.",
+   "whys": [
+    "Because layers stay after their reason has gone, and chains grow until a consolidation.",
+    "Because 0.1.0 judges a layer once, at birth, and never again.",
+    "Because nothing in the stack turns its own evidence (imports, tests, attacks) into a judgement about why a layer is here.",
+    "Because the stack's trust maths (Weight, Trust, Leighton) has only been pointed at claims about the world, never at claims the stack makes about itself.",
+    "Because the stack has never been asked to justify itself; James's memory has done that job."
+   ],
+   "branches": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ]
+  },
+  "No automatic removal of anything.\nNo call counting.\nNo new maths: Leighton V3 as it is.\nNo signing on the VPS.",
+  "James gets a short list each day of the claims, about layers or about the projects he is building, that are unknown or doubted, with the evidence; and the Field shows which projects still hold.",
+  "By 2027-04-30, at least 2 layers or projects are kept, consolidated, parked or retired because the Relevance section asked, and no question in 90 days was raised by a broken measurement.",
+  "James decides. The VPS report and the Field show it. Nobody outside James is waiting for it.",
+  "James owns it and signs every keep, consolidate or retire.",
+  "Runs inside the daily Saboteur report on the VPS; answers are given on the laptop. A broken run shows as a RED report.",
+  "If it is wrong, it asks about a layer that is fine (James answers once) or misses one that has gone stale; nothing is removed without James.",
+  "James's time answering questions, a few a week at most. The computation is local and adds seconds to the daily report.",
+  "Saves the day of rework a late consolidation costs; doing nothing means stale layers pile up until a chain forces a consolidation, as with the Saboteur.",
+  "James's memory, a quarterly manual review, a dependency analyser that finds unused imports, or doing nothing. Could reuse an open-source dependency analyser for the import graph.",
+  "Leighton V3 unchanged; the weights file is registered into its DomainRegistry at start. λ never stored. No key on the VPS. Spare time only.",
+  "Evidence about the stack's own code is public-safe. For entities that are not code, the only evidence is James's answered claims. Runs and claims about James's other entities (projects, business ideas, career decisions) stay private in ~/.forge/validation/ and never leave the laptop.",
+  "P10, P11, P14 (the stack's own); the VPS check and the Saboteur rotation for evidence; Python's ast module for the import graph. All replaceable and local.",
+  "About 30 repositories and a handful of projects, a few claims each: a few hundred claims; at 10x it is still seconds.",
+  "1. Claims with λ through Leighton V3, asked in the daily report and the Field\n2. A quarterly manual review using the checklist's retro\n3. Reuse an open-source dependency analyser for unused code only\n4. Don't build it, park it: keep 0.1.0's birth-only validation",
+  "Option 1 uses the stack's own maths but needs evidence weights that are guesses at first. A manual review needs memory and discipline. A dependency analyser answers 'is it imported', not 'why is it here'. Parking leaves life and death to memory.",
+  {
+   "chosen": "Claims with λ through Leighton V3, asked in the daily report and the Field",
+   "rejected": "Quarterly manual review; dependency analyser only; park it",
+   "reason": "It uses the stack's own trust maths on the stack's own evidence, and a quiet layer drifts to unknown, not to distrusted.",
+   "downside": "The evidence weights and half-lives are guesses until 90 days of outcomes calibrate them.",
+   "trigger": "If more than 3 questions in the first 30 days come from a broken measurement, stop and recalibrate before going on."
+  },
+  "The import graph (following sys.path.insert, FORGE_LEGACY_ROOT and importlib) and 'reached on a real path', claims from runs and SPECs, λ through Leighton V3, and the Relevance section in the daily report, by 2027-01-31.",
+  "The import graph from the real entry points can be built statically, following sys.path.insert, FORGE_LEGACY_ROOT and importlib.\nLeighton V3's domain registry gives per-kind decay without changes.\nThe evidence weights give sensible λ on the existing layers.",
+  "Build the import graph statically from the entry points and compare it with a hand check of 5 layers; compute λ through Leighton V3's domain registry on the existing layers in a dry run; James reviews the evidence weights and the dry-run list before anything is shown daily.",
+  "The Relevance section lists each question with its λ and evidence; a dry run that asks about a layer James knows is in use shows the weights or the import graph are broken.",
+  "The import graph or the evidence weights are wrong, so the stack asks about layers that are in use and James stops reading the section.",
+  {
+   "start": "The stack asks about layers that are in use.",
+   "whys": [
+    "Because the import graph misses a real path, such as a dynamic import or a sibling found through sys.path.",
+    "Because the layers find each other through sys.path inserts and FORGE_LEGACY_ROOT, which a static graph cannot always see.",
+    "",
+    "",
+    ""
+   ],
+   "branches": [
+    "",
+    "",
+    "",
+    "",
+    ""
+   ]
+  },
+  "A layer could be made to look used with a dummy import from an entry point; the import graph records the path, so the reason is visible.",
+  "When a question comes from a missed real path, add the sys.path and FORGE_LEGACY_ROOT resolution to the import graph, record the missed path as a test, and recompute.",
+  "James approves the evidence weights, the half-lives and every signed answer; the weights live in one file in the layer; the CHANGELOG records each change.",
+  "The claims, the evidence table and the report explain themselves; no handover capsule yet.",
+  "One command prints the Relevance section for the whole stack.",
+  {
+   "signal": "By 2027-04-30 no layer has been kept, consolidated or retired because of a question, or James has stopped answering for 30 days",
+   "checkby": "2027-04-30",
+   "then": "James decides: keep, recalibrate, or retire 0.2.0 back to birth-only validation."
+  },
+  {
+   "reviewer": "A fresh AI agent (Claude) that never saw the answers or how they were written; it checked claims against the stack's code, read-only, 2026-11-22. Its own facts are logged as claims and were re-checked against the code before use.",
+   "found": "1. CONSTRAINTS: 'Leighton V2 unchanged' pins the version whose unstated k/t units made 'forge trust' always return 1.00; V3 was frozen to fix it (leighton-engine-layer/SPEC_V3.md). Re-checked: true.\n2. ASSUMPTIONS / ROOT CAUSE: a static import graph misses how the stack is wired: 193 files use sys.path.insert, 12 use FORGE_LEGACY_ROOT, and the CLI, ai-gate and the Field load modules with importlib. Re-checked: true (the reviewer counted 22 for FORGE_LEGACY_ROOT; 12 outside the archives).\n3. SUCCESS / DECISION / FIRST SLICE: the first slice lands 2027-01-31 and the check is 2027-03-31 (about 60 days), but success and calibration both need 90 days. Re-checked: true.\nAlso: 'any entity' has no evidence source for things that aren't code; weights 'in one file' contradicts 'Leighton unchanged' (its registry is in memory); J-REPLACE 'yes' is wrong: it adds to birth-only validation, it replaces nothing running.",
+   "changing": "1. Leighton V3 (SPEC_V3, compute_lambda_for_domain with explicit time_unit) instead of V2.\n2. The import graph follows sys.path.insert, FORGE_LEGACY_ROOT and importlib loads; the first slice is a dry run checked by hand on 5 layers before anything reaches the daily report.\n3. The check moves to 2027-04-30, 90 days after the first slice.\nAlso: for entities that are not code the only evidence is James's answered claims; the weights live in one file in the layer and are registered into Leighton's DomainRegistry at start; J-REPLACE is 'no' (it adds to 0.1.0, it replaces nothing running).",
+   "rejected": "Nothing."
+  }
+ ],
+ "evidence": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   {
+    "fig": "Leighton V3 has compute_lambda_for_domain over a DomainRegistry",
+    "status": "verified",
+    "src": "leighton-engine-layer/SPEC_V3.md §2.2",
+    "by": "self"
+   }
+  ],
+  [
+   {
+    "fig": "About 30 repositories",
+    "status": "verified",
+    "src": "ls Giblets_Legacy, 2026-11-21",
+    "by": "self"
+   }
+  ],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+ ],
+ "retro": {
+  "result": "",
+  "happened": "",
+  "success": {},
+  "assumptions": {},
+  "kill": "",
+  "step": "",
+  "lesson": ""
+ },
+ "format": "james-checklist-run",
+ "version": "2.2.0",
+ "savedAt": "2026-11-24T00:00:00Z"
+}
