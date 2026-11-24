@@ -1,0 +1,20 @@
+{
+ "format": "p19-claims",
+ "version": 1,
+ "entity": "canon-verify-layer",
+ "name": "P6 Canon Verify",
+ "kind": "primitive",
+ "half_life_days": 365,
+ "claims": [
+  {
+   "id": "canon-verify-layer/PURPOSE",
+   "says": "A ledger can be checked by a verifier that imports no other Forge layer: it reimplements canonical JSON, SHA-256, did:key decoding and Ed25519 itself, so a bug in the layers that write a ledger cannot also hide in the one that checks it.",
+   "source": "canon-verify-layer/SPEC.md §1 (the zero-trust isolation rule) and its Function (\"the zero-trust, standalone verifier\"); SPEC_V2.md (agreement with ledger_v2, current 2.0.0).",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yes to all and commit\" on claims/FIRST_CLAIMS_DRAFT.md",
+   "expected_dry_run": "unknown, not distrusted. It is rarely on a real path by design (it is the auditor), so it should be asked \"why is this here?\", and James's keep answer becomes its evidence."
+  }
+ ]
+}

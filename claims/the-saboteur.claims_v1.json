@@ -1,0 +1,20 @@
+{
+ "format": "p19-claims",
+ "version": 1,
+ "entity": "the-saboteur",
+ "name": "the Saboteur",
+ "kind": "tool",
+ "half_life_days": 120,
+ "claims": [
+  {
+   "id": "the-saboteur/PURPOSE",
+   "says": "The stack's own tools are attacked with mutations, so each one is proven to fail loudly, and the next silent pass is found before it matters.",
+   "source": "the-saboteur/README.md (\"The Challenge\"); SPEC_V1.md and SPEC_V1_1.md (the rotation, current 1.1.0).",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yes to all and commit\" on claims/FIRST_CLAIMS_DRAFT.md",
+   "expected_dry_run": "holds, with fresh evidence, once the VPS runs check_v3 (a slot every 6 hours, a daily report). Until then its evidence is laptop runs only."
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+{
+ "format": "p19-claims",
+ "version": 1,
+ "entity": "consumer",
+ "name": "the Consumer runtime",
+ "kind": "tool",
+ "half_life_days": 120,
+ "claims": [
+  {
+   "id": "consumer/PURPOSE",
+   "says": "A project (a story, a build, a study, a business) can use the Legacy to run itself with no code of its own: it is declared in one sealed capsule, and the runtime does everything else through the Legacy's layers.",
+   "source": "consumer/SPEC.md Function and §1 (what a consumer is). The SPEC is draft 2, not signed off; VERSION is 0.0.0-dev.",
+   "status": "confirmed",
+   "confirmed_by": "James Gilbert",
+   "confirmed_on": "2026-11-24",
+   "confirmed_how": "\"yes to all and commit\" on claims/FIRST_CLAIMS_DRAFT.md",
+   "expected_dry_run": "a real question. Nothing is built and there are no tests, so there is no real path yet; even with a 120-day half-life it should be the first genuine \"is it still worth it?\"."
+  }
+ ],
+ "note": "Kind changed from consumer (60 d) to tool (120 d) on James's yes, 2026-11-24: it is the runtime every consumer runs on."
+}
